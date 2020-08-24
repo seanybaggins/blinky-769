@@ -15,10 +15,10 @@ mockall = "0.7.2"
 [features]
 embedded_platform = []
 st_board = []
-stm32f407 = ["stm32f4xx-hal/stm32f407", "embedded_platform", "st_board"]
+stm32f769 = ["stm32f7xx-hal/stm32f769", "embedded_platform", "st_board"]
 
 [target.thumbv7em-none-eabihf.dependencies]
 cortex-m = "0.6.3"
 cortex-m-rt = "0.6.12"
 panic-halt = "0.2.0"
-stm32f4xx-hal = {version = "0.8.3", features = ["stm32f407", "rt"]}
+stm32f7xx-hal = {version = "0.2.0", features = ["stm32f769", "rt"]}
