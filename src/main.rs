@@ -12,7 +12,7 @@ use cortex_m_rt::entry;
 #[cfg(feature = "stm32f769")]
 use stm32f7xx_hal::{
     delay::Delay,
-    //pac,
+    pac,
     prelude::*,
 };
 
