@@ -1,0 +1,10 @@
+# Makes cargo run automatically start gdb and deploy
+# the application to the target
+[target.thumbv7em-none-eabihf]
+runner = "gdb-multiarch -q -x run.gdb"
+
+rustflags = [
+  # Requirement of the cortex-m-rt crate.
+  # I believe Tlink.x is a file that specifies memory layout.
+  "-C", "link-arg=-Tlink.x", 
+]
